@@ -1,0 +1,31 @@
+<div class="case-result-container">
+    <div class="top-icons">
+        <mat-icon class="icon-check-box" aria-hidden="false">check_box_outline_blank</mat-icon>
+        <mat-icon class="icon-down-arrow" aria-hidden="false">keyboard_arrow_down</mat-icon>
+        <mat-icon class="icon-local-offer" aria-hidden="false">local_offer_outline</mat-icon>
+        <mat-icon class="icon-star" aria-hidden="false">star_border_outline_blank</mat-icon>
+        <mat-icon class="icon-schedule" aria-hidden="false">schedule</mat-icon>
+        <mat-icon class="icon-sync" aria-hidden="false">sync</mat-icon>
+        <mat-icon class="icon-sort" aria-hidden="false">sort</mat-icon>
+    </div>
+    <div class="case-result-list">
+        <mat-list role="list">
+            <mat-list-item *ngFor="let caseItem of caseResultList" role="listitem" (click)="getCaseDetails(caseItem.case.case_id)">
+                <div class="case-item-content">
+                    <p class="case-name">
+                        {{caseItem.case.case_name}}
+                    </p>
+                    <p class="case-details">
+                        {{caseItem.case.courthouse}} | {{caseItem.case.jurisdiction}} | {{caseItem.case.case_number}} |
+                        {{caseItem.case.created_date}} |
+                    </p>
+                </div>
+            </mat-list-item>
+        </mat-list>
+    </div>
+    <div class="pagination">
+        <mat-icon class="icon-prev" (click)="prev()" aria-hidden="false">arrow_back_ios</mat-icon>
+        {{pageNumber}}
+        <mat-icon class="icon-next" (click)="next()" aria-hidden="false">arrow_forward_ios</mat-icon>
+    </div>
+</div>

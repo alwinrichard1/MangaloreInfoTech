@@ -1,0 +1,48 @@
+.case-result-container {
+    .top-icons {
+        mat-icon {
+            margin-right: 20px;
+        }
+        .icon-sort {
+            float: right;
+        }
+        .icon-check-box {
+            margin-right: 0;
+        }
+    }
+    mat-list-item {
+        height: 80px;
+        background: #fbfbfb;
+        cursor: pointer;
+    }
+    .case-result-list {
+        .case-item-content {
+            .case-name {
+                font-size: 12px;
+                font-weight: 500;
+                color: #4b4b5d;
+                margin-bottom: 0px;
+            }
+            .case-details {
+                font-size: 12px;
+                color: #4b4b5d;
+            }
+        }
+    }
+    .pagination {
+        float: right;
+        mat-icon {
+            font-size: 14px;
+            cursor: pointer;
+        }
+        .icon-prev {
+            position: relative;
+            top: 2px;
+        }
+        .icon-next {
+            left: 15px;
+            position: relative;
+            top: 2px;
+        }
+    }
+}

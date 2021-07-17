@@ -1,0 +1,45 @@
+.search-box {
+    padding: 5px;
+    background-color: whitesmoke;
+    font-size: 12px;
+    width: 80%;
+    .search-button {
+        background: #6e7191;
+        font-size: 12px;
+        margin-left: 12px;
+        width: 25%;
+    }
+    .search-input {
+        display: inline-block;
+        background-color: white;
+        height: 39px;
+        padding-right: 16px;
+        padding-left: 16px;
+        color: #6e7191;
+        width: 70%;
+        border-radius: 4px;
+        .icon-search {
+            top: 8px;
+            position: relative;
+            padding-right: 10px;
+        }
+        .input-text {
+            border: none;
+            height: 30px;
+            margin-right: 10px;
+            width: 60%;
+        }
+        .save-schedule-button {
+            text-transform: uppercase;
+            font-weight: 600;
+            padding-right: 10px;
+            border-right: 1px solid #6e7191;
+            margin-right: 10px;
+        }
+        .icon-backspace {
+            top: 8px;
+            position: relative;
+            float: right;
+        }
+    }
+}

@@ -1,0 +1,45 @@
+<div class="case-details-container">
+    <div class="case-details-top">
+        <p class="heading">Case details</p>
+        <p class="fullscreen-btn">
+            <mat-icon class="icon-full-screen" aria-hidden="false">open_in_full</mat-icon>
+            <label *ngIf="!fullScreen" (click)="fullScreenStatus(true)">Full screen</label>
+            <label *ngIf="fullScreen" (click)="fullScreenStatus(false)">Show less</label>
+        </p>
+    </div>
+    <div class="case-details">
+        <mat-card class="case-details-card">
+            <mat-card-header>
+                <mat-card-title>{{selectedCaseDetails.case_meta.case_name}}</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <div class="navigation">
+                    <ul>
+                        <li class="menu-active">Details</li>
+                        <li>Dockets</li>
+                        <li>Documents</li>
+                        <li>More</li>
+                    </ul>
+                </div>
+                <div class="menu-content">
+                    <li>
+                        <h4>Case number</h4>
+                        <p>{{selectedCaseDetails.case_meta.case_number}}</p>
+                    </li>
+                    <li>
+                        <h4>Case status</h4>
+                        <p>{{selectedCaseDetails.case_meta.case_status_category}}</p>
+                    </li>
+                    <li>
+                        <h4>Jurisdiction</h4>
+                        <p>{{selectedCaseDetails.case_meta.jurisdiction}}</p>
+                    </li>
+                    <li>
+                        <h4>Court House</h4>
+                        <p>{{selectedCaseDetails.case_meta.courthouse}}</p>
+                    </li>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

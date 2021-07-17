@@ -1,0 +1,9 @@
+<mat-progress-bar *ngIf="loaderStatus" mode="indeterminate"></mat-progress-bar>
+<div [ngStyle]="{'width':fullScreen ? '90%' : '48%' }" class="result-case-details">
+    <app-case-details (fullScreenEvent)="getFullScreenStatus($event)" *ngIf="selectedCaseDetails"
+        [selectedCaseDetails]="selectedCaseDetails"></app-case-details>
+</div>
+<div *ngIf="!fullScreen" class="result-case-result">
+    <app-case-result *ngIf="searchResult" (pageNumberEvent)="getPageNumber($event)"
+        (caseIdEvent)="getCaseDetails($event)" [caseResultList]="searchResult"></app-case-result>
+</div>

@@ -1,0 +1,9 @@
+<div class="search-box">
+    <div class="search-input">
+        <mat-icon class="icon-search" aria-hidden="false" aria-label="Example home icon">search</mat-icon>
+        <input [(ngModel)]="seachString" class="input-text" type="text" placeholder="Search">
+        <label class="save-schedule-button">Save and schedule search</label>
+        <mat-icon class="icon-backspace" aria-hidden="false" aria-label="Example home icon">backspace_outline</mat-icon>
+    </div>
+    <button (click)="emitSearchItem(seachString)" class="search-button" mat-raised-button color="primary">Search</button>
+</div>
